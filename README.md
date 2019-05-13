@@ -11,9 +11,9 @@ This demo app uses [Rails 6](https://rubyonrails.org/), [Webpacker](https://gith
 ## Run the app in development mode
 `docker-compose up`
 
+Now open http://localhost:3000 and look at your Javascript console to see messages
+
 ## Build the app for production
 `docker build -t docker-rails-demo .`
-
-Now open http://localhost:3000 and look at your Javascript console to see messages
 
 Released under the  [MIT License](https://opensource.org/licenses/MIT)
