@@ -16,6 +16,4 @@ This demo app uses [Rails 5](https://rubyonrails.org/), [Webpacker](https://gith
 
 Now open http://localhost:3000 and look at your Javascript console to see messages
 
-Brought to you by [Soulmates.ai](http://www.soulmates.ai)
-
 Released under the  [MIT License](https://opensource.org/licenses/MIT)
