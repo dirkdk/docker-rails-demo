@@ -1,4 +1,4 @@
-version: '3.0'
+version: "3.0"
 services:
   db:
     image: postgres:10
@@ -20,7 +20,7 @@ services:
     build:
       context: .
       args:
-        precompileassets: 'not'
+        precompileassets: "not"
     links:
       - db
       - webpacker
