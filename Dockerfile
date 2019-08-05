@@ -13,7 +13,7 @@ RUN apt-get -y update && \
         git-all \
         curl \
         ssh \
-        postgresql-client-10 libpq5 libpq-dev -y && \
+        postgresql-client-11 libpq5 libpq-dev -y && \
       wget -qO- https://deb.nodesource.com/setup_12.x  | bash - && \
       apt-get install -y nodejs && \
       wget -qO- https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
