@@ -14,7 +14,7 @@ RUN apt-get -y update && \
         curl \
         ssh \
         postgresql-client-10 libpq5 libpq-dev -y && \
-      wget -qO- https://deb.nodesource.com/setup_9.x  | bash - && \
+      wget -qO- https://deb.nodesource.com/setup_12.x  | bash - && \
       apt-get install -y nodejs && \
       wget -qO- https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
       echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
