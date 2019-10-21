@@ -25,6 +25,9 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+# this file should be created AND checked into git for all forks
+/config/credentials.yml.enc
+
 /public/packs
 /public/packs-test
 /node_modules
