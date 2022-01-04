@@ -14,16 +14,10 @@ RUN apt-get -y update && \
         curl \
         ssh \
         postgresql-client-11 libpq5 libpq-dev -y && \
-      wget -qO- https://deb.nodesource.com/setup_12.x  | bash - && \
-      apt-get install -y nodejs && \
-      wget -qO- https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
-      echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
-      apt-get update && \
-      apt-get install yarn && \
       apt-get clean && \
       rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-RUN gem install bundler -v 2.0.2
+RUN gem install bundler
 #Install gems
 RUN mkdir /gems
 WORKDIR /gems

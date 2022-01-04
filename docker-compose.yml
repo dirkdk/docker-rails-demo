@@ -7,14 +7,6 @@ services:
     environment:
       POSTGRES_PASSWORD: ${DB_USER_PASSWORD}
 
-  webpacker:
-    image: ${DOCKER_IMAGE_NAME-dockerrailsdemo}
-    command: ["./scripts/start_webpack_dev.sh"]
-    volumes:
-      - .:/opt/dockerrailsdemo:cached
-    ports:
-      - 3035:3035
-
   web:
     image: ${DOCKER_IMAGE_NAME-dockerrailsdemo}
     build:
@@ -23,7 +15,6 @@ services:
         precompileassets: "not"
     links:
       - db
-      - webpacker
     ports:
       - 3000:3000
     command: ["./scripts/wait-for-it.sh", "db:5432", "--", "./scripts/start_rails.sh"]
