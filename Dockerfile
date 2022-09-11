@@ -23,7 +23,7 @@ RUN apt-get -y update && \
       apt-get clean && \
       rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-RUN gem install bundler -v 2.0.2
+RUN gem install bundler
 #Install gems
 RUN mkdir /gems
 WORKDIR /gems
