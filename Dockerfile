@@ -2,7 +2,8 @@ FROM ruby:3.1.2-slim
 ARG precompileassets
 
 RUN apt-get update && apt-get install -y curl gnupg
-RUN echo "deb http://apt.postgresql.org/pub/repos/apt/ stretch-pgdg main" > /etc/apt/sources.list.d/pgdg.list
+# bullseye = debian 11
+RUN echo "deb http://apt.postgresql.org/pub/repos/apt/ bullseye-pgdg main" > /etc/apt/sources.list.d/pgdg.list
 RUN curl -q https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
 
 RUN apt-get -y update && \
@@ -13,7 +14,7 @@ RUN apt-get -y update && \
         git-all \
         curl \
         ssh \
-        postgresql-client-11 libpq5 libpq-dev -y && \
+        postgresql-client-14 libpq5 libpq-dev -y && \
       wget -qO- https://deb.nodesource.com/setup_12.x  | bash - && \
       apt-get install -y nodejs && \
       wget -qO- https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
