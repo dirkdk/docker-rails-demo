@@ -8,7 +8,7 @@ Read the blog post with background info about his repository at [Running a Rails
 `docker-compose build`
 
 ## Create the database
-`docker-compose run web scripts/wait-for-it.sh db:5432 --  "rake db:create db:migrate"`
+`docker-compose run web scripts/wait-for-it.sh db:5432 --  "rails db:create db:migrate"`
 
 ## Run the app in development mode
 `docker-compose up`
