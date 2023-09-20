@@ -3,7 +3,9 @@ ARG precompileassets
 
 RUN apt-get update && apt-get install -y curl gnupg
 # bullseye = debian 11
-RUN echo "deb http://apt.postgresql.org/pub/repos/apt/ bullseye-pgdg main" > /etc/apt/sources.list.d/pgdg.list
+# bookworm = debian 12
+
+RUN echo "deb http://apt.postgresql.org/pub/repos/apt/ bookworm-pgdg main" > /etc/apt/sources.list.d/pgdg.list
 RUN curl -q https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
 
 RUN apt-get -y update && \
