@@ -1,6 +1,6 @@
-FROM ruby:3.2.2-slim
+FROM ruby:3.3.0-slim
 ARG precompileassets
-ENV NODE_MAJOR=20
+ENV NODE_MAJOR=21
 
 RUN apt-get update && apt-get install -y curl gnupg
 # bullseye = debian 11
@@ -29,7 +29,7 @@ RUN apt-get update && \
       npm install --global yarn && \
       apt-get clean && \
       rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-RUN gem install bundler
+RUN gem install bundler -v 2.4.12
 #Install gems
 RUN mkdir /gems
 WORKDIR /gems
