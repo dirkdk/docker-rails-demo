@@ -7,6 +7,10 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= favicon_link_tag asset_path("favicon.ico") %>
+    <% %w(16 32).each do |size| %>
+      <%= favicon_link_tag asset_path("favicon-#{size}x#{size}.png"), rel: 'icon', type: 'image/png', sizes: "#{size}x#{size}" %>
+    <% end %>
   </head>
 
   <body>
