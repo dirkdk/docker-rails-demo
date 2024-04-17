@@ -17,7 +17,7 @@ RUN apt-get -y update && \
         git-all \
         curl \
         ssh \
-        postgresql-client-14 libpq5 libpq-dev -y
+        postgresql-client-16 libpq5 libpq-dev -y
 
 RUN apt-get install -y ca-certificates curl gnupg
 RUN mkdir -p /etc/apt/keyrings
