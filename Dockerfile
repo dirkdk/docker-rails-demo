@@ -1,4 +1,4 @@
-FROM ruby:3.3.0-slim
+FROM ruby:3.3.6-slim
 ARG precompileassets
 ENV NODE_MAJOR=21
 ENV BUNDLER_VERSION="2.5.5"
